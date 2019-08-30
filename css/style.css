@@ -13671,3 +13671,20 @@ html .dtp .hidden {
 html .dtp .invisible {
 	visibility: hidden;
 }
+
+
+
+/* Configuracion personalizada */
+
+.rd-navbar-main{
+	max-height: 100px;
+}
+
+.brand-logo-light, .rd-navbar-brand{
+	max-width: 150px !important;
+	max-height:;
+}
+
+.rd-navbar--is-stuck + .rd-navbar-brand{
+	max-height: 50px !important;	
+}

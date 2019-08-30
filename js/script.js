@@ -47,6 +47,7 @@
 	 */
 	function isScrolledIntoView ( elem ) {
 		if ( isNoviBuilder ) return true;
+		
 		return elem.offset().top + elem.outerHeight() >= $window.scrollTop() && elem.offset().top <= $window.scrollTop() + $window.height();
 	}
 
@@ -59,10 +60,11 @@
 		var scrollHandler = function () {
 			if ( ( !element.hasClass( 'lazy-loaded' ) && ( isScrolledIntoView( element ) ) ) ) {
 				func.call();
+				
 				element.addClass( 'lazy-loaded' );
 			}
 		};
-
+		
 		scrollHandler();
 		$window.on( 'scroll', scrollHandler );
 	}
@@ -1139,6 +1141,7 @@
 		// parallax scroll
 		if($('[data-parallax-scroll]').length && !isNoviBuilder && !isMobile){
 			ParallaxScroll.init();
+			console.log("FUA CHAVAL")
 		}
 
 		// Select 2
